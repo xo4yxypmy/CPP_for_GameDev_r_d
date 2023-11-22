@@ -1,22 +1,29 @@
 #include <iostream>
 
 enum class Month {
-    January,
-    February,
-    March,
-    April,
-    May,
-    June,
-    July,
-    August,
-    September,
-    October,
-    November,
-    December
+    January = 1,
+    February = 2,
+    March = 3,
+    April = 4,
+    May = 5,
+    June = 6,
+    July = 7,
+    August = 8,
+    September = 9,
+    October = 10,
+    November = 11,
+    December = 12
+};
+
+enum class Season {
+    Winter,
+    Spring,
+    Summer,
+    Autumn
 };
 
 int main()
-{
+{ 
     // task 1
     int a = 0;
     int b = 0;
@@ -32,7 +39,7 @@ int main()
     if (a >= b && a >= c) {
         std::cout << "Max number is: " << a << std::endl;
     }
-    else if (b >= a && b >= c) {
+    else if (b >= c) {
         std::cout << "Max number is: " << b << std::endl;
     }
     else {
@@ -62,7 +69,7 @@ int main()
     else {
         std::cout << "Your number is NOT divisible by 5 AND 11" << std::endl;
     }
-
+    
     // task 4
     int g = 0;
     int h = 0;
@@ -75,16 +82,16 @@ int main()
     std::cout << "Enter 3rd number: ";
     std::cin >> i;
 
-    if (g + h + i == 180 && g != 0 && h != 0 && i != 0) {
-        std::cout << "You have a valid triangle" << std::endl;
-    }
-    else if (g + h + i == 180 && (g <= 0 || h <= 0 || i <= 0)) {
+    if (g + h + i == 180 && (g <= 0 || h <= 0 || i <= 0)) {
         std::cout << "This is not a triangle, because none of corners can\'t be less than or equal to 0" << std::endl;
+    }
+    else if (g + h + i == 180 && g != 0 && h != 0 && i != 0) {
+        std::cout << "You have a valid triangle" << std::endl;
     }
     else {
         std::cout << "This is not a triangle, because summ of corners must be equal to 180" << std::endl;
     }
-
+    
     // task 5
     int monthNumber = 0;
 
@@ -93,23 +100,7 @@ int main()
 
     Month selectedMonth;
 
-    switch (monthNumber) {
-    case 1: selectedMonth = Month::January; break;
-    case 2: selectedMonth = Month::February; break;
-    case 3: selectedMonth = Month::March; break;
-    case 4: selectedMonth = Month::April; break;
-    case 5: selectedMonth = Month::May; break;
-    case 6: selectedMonth = Month::June; break;
-    case 7: selectedMonth = Month::July; break;
-    case 8: selectedMonth = Month::August; break;
-    case 9: selectedMonth = Month::September; break;
-    case 10: selectedMonth = Month::October; break;
-    case 11: selectedMonth = Month::November; break;
-    case 12: selectedMonth = Month::December; break;
-    default:
-        std::cout << "Error: Invalid month number" << std::endl;
-        return 1;
-    }
+    selectedMonth = static_cast<Month>(monthNumber);
 
     switch (selectedMonth) {
     case Month::January: std::cout << "January" << std::endl; break;
@@ -124,6 +115,9 @@ int main()
     case Month::October: std::cout << "October" << std::endl; break;
     case Month::November: std::cout << "November" << std::endl; break;
     case Month::December: std::cout << "December" << std::endl; break;
+    default:
+        std::cout << "Error: Invalid month number" << std::endl;
+        return 1;
     }
 
     // task 6
@@ -131,31 +125,48 @@ int main()
     std::cout << "Enter number of month: ";
     std::cin >> numberOfSeason;
 
-    switch (numberOfSeason)
-    {
+    Season selectedSeason;
+
+    switch (numberOfSeason) {
     case 12:
     case 1:
     case 2:
-        std::cout << "Winter" << std::endl;
+        selectedSeason = Season::Winter;
         break;
     case 3:
     case 4:
     case 5:
-        std::cout << "Spring" << std::endl;
+        selectedSeason = Season::Spring;
         break;
     case 6:
     case 7:
     case 8:
-        std::cout << "Summer" << std::endl;
+        selectedSeason = Season::Summer;
         break;
     case 9:
     case 10:
     case 11:
-        std::cout << "Autumn" << std::endl;
+        selectedSeason = Season::Autumn;
         break;
     default:
-        std::cout << "Error: Invalid month number" << std::endl;
+        std::cout << "Error: Invalid season number" << std::endl;
         return 1;
     }
 
+    switch (selectedSeason) {
+    case Season::Winter:
+        std::cout << "Winter" << std::endl;
+        break;
+    case Season::Spring:
+        std::cout << "Spring" << std::endl;
+        break;
+    case Season::Summer:
+        std::cout << "Summer" << std::endl;
+        break;
+    case Season::Autumn:
+        std::cout << "Autumn" << std::endl;
+        break;
+    }
+
+    return 0;
 }
