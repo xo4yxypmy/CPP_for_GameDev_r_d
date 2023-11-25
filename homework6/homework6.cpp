@@ -2,7 +2,7 @@
 #include <cctype>
 
 int main()
-{
+{/*
     // task 1
     int a1 = 0;
     int d = 0;
@@ -19,7 +19,7 @@ int main()
         std::cout << an << " ";
     }
     std::cout << std::endl;
-
+    
     // task 2
     int nF = 0;
     std::cout << "Enter the element number of the Fibonacci sequence: ";
@@ -33,7 +33,7 @@ int main()
         f2 = next;
     }
 
-    std::cout << "Element number " << nF << " in the Fibonacci sequence: " << (nF > 2 ? f2 : 1) << std::endl;
+    std::cout << "Element number " << nF << " in the Fibonacci sequence: " << f2 << std::endl;
 
     // task 3
     int factorial = 0;
@@ -51,7 +51,7 @@ int main()
 
         std::cout << "Factorial of " << factorial << "! is " << nFactorial << std::endl;
     }
-
+    */
     // task 4
     int f = 0;
     int e = 0;
@@ -102,13 +102,13 @@ int main()
     }
     std::cout << "e" << std::endl;
 
-    for (int a = 0; a < f; a++) {
+    for (int a = 0; a < f; a++) {        
         for (int b = 0; b <= a; b++) {
-            std::cout << (b % 2);
+            std::cout << (a + b + 1) % 2;
         }
         std::cout << std::endl;
     }
-
+    
     std::cout << std::endl;
 
     //task 5
