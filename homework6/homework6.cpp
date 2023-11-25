@@ -2,7 +2,7 @@
 #include <cctype>
 
 int main()
-{/*
+{
     // task 1
     int a1 = 0;
     int d = 0;
@@ -51,7 +51,7 @@ int main()
 
         std::cout << "Factorial of " << factorial << "! is " << nFactorial << std::endl;
     }
-    */
+    
     // task 4
     int f = 0;
     int e = 0;
