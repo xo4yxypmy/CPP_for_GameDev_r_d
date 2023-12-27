@@ -25,7 +25,7 @@ int main()
 	int resultFactorialLoop = factorialLoop(userNumberT2);
 	std::cout << resultFactorialLoop << std::endl;
 
-	int resultFactorialRecu = factorialRecu(userNumberT2);
+	int resultFactorialRecu = factorialRecursive(userNumberT2);
 	std::cout << resultFactorialRecu << std::endl;
 	
 	//task 3
@@ -34,9 +34,8 @@ int main()
 
 	fromBigToSmallLoop(userNumberT3);
 	fromSmallToBigLoop(userNumberT3);
-	fromBigToSmallRecu(userNumberT3);
-	std::cout << std::endl;
-	fromSmallToBigRecu(userNumberT3);
+	fromBigToSmallRecursive(userNumberT3);
+	fromSmallToBigRecursive(userNumberT3);
 	
 	return 0;
 }

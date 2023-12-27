@@ -1,4 +1,4 @@
 #pragma once
-int factorialRecu(int f);
-int fromBigToSmallRecu(int a);
-int fromSmallToBigRecu(int a);
+int factorialRecursive(int f);
+int fromBigToSmallRecursive(int a);
+int fromSmallToBigRecursive(int a);

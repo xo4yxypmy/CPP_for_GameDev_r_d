@@ -24,13 +24,13 @@ int factorialLoop(int f) {
 		std::cout << "Please enter a number greater than ";
 		return 0;
 	}
-	else {
-		int nFactorial = 1;
-		for (int i = 1; i <= f; ++i) {
-			nFactorial *= i;
-		}
-		return nFactorial;
+	
+	int nFactorial = 1;
+	for (int i = 1; i <= f; ++i) {
+		nFactorial *= i;
 	}
+	return nFactorial;
+	
 }
 
 int fromBigToSmallLoop(int a) {
