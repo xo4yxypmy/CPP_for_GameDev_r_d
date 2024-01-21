@@ -1,4 +1,5 @@
 #pragma once
+void printArray(int numbers[], int size);
 void translateArray(int numbers[], int size);
 void toUppercase(char str[]);
 bool isPalindrome(const char str[]);
