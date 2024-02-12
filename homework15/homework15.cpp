@@ -17,7 +17,7 @@ int main()
 	
 	printAverageArray(students, classSize);
 
-	int count = countStudentsAbove75(students, classSize);
+	int count = countStudentsAboveThreshold(students, classSize, 75.0);
 	std::cout << "Amount of students with average mark above 75.0 is " << count << std::endl;
 	std::cout << std::endl;
 

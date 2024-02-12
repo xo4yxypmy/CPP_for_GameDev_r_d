@@ -6,7 +6,8 @@ void printArray(const Student students[], int size) {
 	for (int i = 0; i < size; ++i) {
 		std::cout << students[i].name;
 		std::cout << "\'s marks: ";
-		for (int j = 0; j < 4; ++j) {
+		unsigned marksAmount = 4;
+		for (int j = 0; j < marksAmount; ++j) {
 			std::cout << students[i].marks[j] << " ";
 		}
 		std::cout << std::endl;
@@ -16,7 +17,8 @@ void printArray(const Student students[], int size) {
 
 double averageMark(const Student& student) {
 	int sum = 0;
-	for (int i = 0; i < 4; i++) {
+	unsigned marksAmount = 4;
+	for (int i = 0; i < marksAmount; i++) {
 		sum += student.marks[i];
 	}
 
@@ -58,11 +60,11 @@ Student* getMostSuccessfullStudent(Student students[], int size) {
 	return mostSuccessful;
 }
 
-int countStudentsAbove75(Student students[], int size) {
+int countStudentsAboveThreshold(Student students[], int size, double threshold) {
 	int count = 0;
 	for (int i = 0; i < size; ++i) {
 		double currentAverage = averageMark(students[i]);
-		if (currentAverage > 75.0) {
+		if (currentAverage > threshold) {
 			count++;
 		}
 	}

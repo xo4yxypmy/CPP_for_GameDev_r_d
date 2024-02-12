@@ -12,4 +12,4 @@ void printAverageArray(const Student students[], int size);
 bool compareStudents(const Student& a, const Student& b);
 void sortStudents(Student students[], int size);
 Student* getMostSuccessfullStudent(Student students[], int size);
-int countStudentsAbove75(Student students[], int size);
+int countStudentsAboveThreshold(Student students[], int size, double threshold);
