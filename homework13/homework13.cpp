@@ -1,10 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <fstream>
-#include <iomanip>
 #include "header_h13.h"
 
 int main()

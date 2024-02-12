@@ -1,4 +1,13 @@
-#pragma once
+#include <iostream>
+#include <fstream>
+#include <ctime>
+#include <sstream>
+#include <cstdlib>
+#include <climits>
+#include <string>
+#include <iomanip>
+#include <cctype>
+
 int getDay(const std::tm* tmObj);
 int getMonth(const std::tm* tmObj);
 int getYear(const std::tm* tmObj);

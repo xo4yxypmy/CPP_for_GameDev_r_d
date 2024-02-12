@@ -1,14 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <iostream>
-#include <fstream>
-#include <ctime>
-#include <sstream>
-#include <cstdlib>
-#include <climits>
-#include <string>
-#include <iomanip>
-#include <cctype>
 #include "header_h13.h"
 
 int getDay(const std::tm* tmObj)
