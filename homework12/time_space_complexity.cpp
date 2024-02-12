@@ -4,7 +4,7 @@ bool binarySearch(int arr[], int size, int x)
 {
     int l = 0;                                  //time complexity
     int r = size - 1;                           //main operatin binarySearch
-                                                // O(logCOLUMNS) + O(logROWS)
+                                                // O(N logN)
     while (l <= r) {
         const int m = l + (r - l) / 2;          //space complexity
                                                 //array arr has rows and columns
