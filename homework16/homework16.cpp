@@ -48,6 +48,7 @@ int main()
 	team1.addPlayer(&player2);
 	team2.addPlayer(&player3);
 	team2.addPlayer(&player4);
+	team2.addPlayer(&player3);
 
 	team1.printTeamInfo();
 	team2.printTeamInfo();

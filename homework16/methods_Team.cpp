@@ -3,6 +3,12 @@
 #include "class_Player.h"
 
 bool Team::addPlayer(Player* player) {
+	for (Player* p : players) {
+		if (p == player) {
+			return false;
+		}
+	}
+	
 	if (numPlayers < MAX_PLAYERS) {
 		players.push_back(player);
 		player->setTeam(this);
